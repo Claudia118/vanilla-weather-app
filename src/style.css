@@ -15,6 +15,10 @@ h1 {
   margin: 15px auto;
 }
 
+li::first-letter {
+  text-transform: capitalize;
+}
+
 .weather-app {
   width: 680px;
   height: 100%;
@@ -44,7 +48,6 @@ h1 {
 .col-md-6 {
   display: inline-block;
   margin: 25px auto;
-  text-transform: capitalize;
 }
 
 .city-name {
@@ -58,6 +61,7 @@ h1 {
   line-height: 30px;
   margin: 20px auto;
   text-align: left;
+  padding: 15px 5px;
 }
 
 .temp-description {
@@ -71,13 +75,14 @@ h1 {
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1;
 }
 .temp {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1;
 }
+
 .temp-description a {
   text-decoration: none;
 }
@@ -97,4 +102,24 @@ h1 {
 
 .footer {
   margin: 5px auto;
+}
+
+@media screen and (max-width: 764px) {
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+
+  .city-description {
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .temp {
+    font-size: 2rem;
+    line-height: 1;
+  }
 }
