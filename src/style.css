@@ -1,15 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Ubuntu:wght@500;700&display=swap");
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.app {
-  max-width: 900px;
-  height: 400px;
-  border: 1px solid black;
-  margin: 40px auto;
-}
-.container {
+.weather-app {
+  width: 750px;
   height: 100%;
+  margin: 40px auto;
+  border: 2px solid #27b1be;
+  background-color: #e2e0e0;
+  border-radius: 5px;
+}
+
+.weather-app h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f7aa00;
+  margin: 15px auto;
+}
+
+.city-input {
+  padding: 10px;
+  margin: 15px auto;
+  width: 300px;
+  font-size: 1.2rem;
+}
+
+.city-btn {
+  font-size: 1.2rem;
+  width: 100px;
+  padding: 12px;
+  background-color: #27b1be;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+}
+
+.col-md-6 {
+  display: inline-block;
+  margin: 25px auto;
+}
+
+.city-name {
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.city-description {
+  font-size: 1.5rem;
+  list-style: none;
+  line-height: 30px;
+  margin: 20px auto;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.temp-description {
+  display: flex;
+  list-style: none;
+  margin: 30px auto;
+}
+
+.temp-description li {
+  padding: 20px;
+}
+
+.temp-description a {
+  text-decoration: none;
+}
+
+.row {
+  margin: 25px auto;
+}
+
+.day {
+  color: #f7aa00;
+  font-size: 1.7rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.weekdays {
+  font-size: 1.2rem;
 }
