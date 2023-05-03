@@ -17,6 +17,9 @@ function formatDate(timestamp) {
 
 function displayTemperature(response) {
   //Getting data from api
+  let cityElement = document.querySelector("#city-name");
+  cityElement.innerHTML = response.data.city;
+
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(response.data.temperature.current);
 
@@ -31,11 +34,16 @@ function displayTemperature(response) {
 
   dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+
+  let iconElement = document.querySelector("#icon-img");
+  iconElement.setAttribute("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
+
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 let apiKey = "2t7b32678ae0df330f1a61b393e477oc";
-let query = "albuquerque";
+let city = "albuquerque";
 
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}&units=metric`;
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);

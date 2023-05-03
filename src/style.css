@@ -67,20 +67,16 @@ li::first-letter {
 .temp-description {
   display: flex;
   list-style: none;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .temp-description li {
-  padding: 15px;
+  padding: 10px;
 }
 
-.icon {
-  font-size: 2.5rem;
-  line-height: 1;
-}
 .temp {
   font-size: 2.5rem;
-  line-height: 1;
+  margin-top: 28px;
 }
 
 .temp-description a {
@@ -121,5 +117,6 @@ li::first-letter {
   .temp {
     font-size: 2rem;
     line-height: 1;
+    margin-top: 35px;
   }
 }
