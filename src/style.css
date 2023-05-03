@@ -44,6 +44,7 @@ h1 {
 .col-md-6 {
   display: inline-block;
   margin: 25px auto;
+  text-transform: capitalize;
 }
 
 .city-name {
@@ -52,7 +53,7 @@ h1 {
 }
 
 .city-description {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   list-style: none;
   line-height: 30px;
   margin: 20px auto;
@@ -66,9 +67,17 @@ h1 {
 }
 
 .temp-description li {
-  padding: 20px;
+  padding: 15px;
 }
 
+.icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.temp {
+  font-size: 2rem;
+  line-height: 1;
+}
 .temp-description a {
   text-decoration: none;
 }
@@ -79,7 +88,7 @@ h1 {
 
 .day {
   color: #f7aa00;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .weekdays {

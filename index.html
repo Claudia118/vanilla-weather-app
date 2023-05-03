@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/024450998e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -23,29 +24,19 @@
         <div class="row align-items-start">
           <div class="col-md-6">
             <ul class="city-description">
-              <li class="city-name">San Francisco</li>
-              <li>Monday 11:55</li>
-              <li>Clear</li>
-              <li>Humidity: <span id="humidity">17</span>% Wind: <span id="wind">4</span>km/h</li>
+              <li class="city-name"></li>
+              <li id="date">Monday 11:55</li>
+              <li id="description">Clear</li>
+              <li>Humidity: <span id="humidity"></span>% Wind: <span id="wind"></span>km/h</li>
             </ul>
-            <!-- <span>San Francisco</span>
-          <br />
-          <span>Monday 11:55</span>
-          <span>Clear</span>
-          <br />
-          <div>Humidity: <span id="humidity">17</span>% Wind: <span id="wind">4</span>km/h</div> -->
           </div>
           <div class="col-md-6">
             <ul class="temp-description">
-              <li><i class="fa-sharp fa-regular fa-sun sun-icon"></i></li>
-              <li>19</li>
+              <li class="icon"><i class="fa-sharp fa-regular fa-sun sun-icon"></i></li>
+              <li class="temp" id="temperature"></li>
               <li><a href="#" id="celsius">&#176;C</a></li>
               <li><a href="#" id="fahrenheit">&#176;F</a></li>
             </ul>
-            <!-- <span><i class="fa-sharp fa-regular fa-sun sun-icon"></i></span>
-          <span>19</span>
-          <a href="#" id="celsius">&#176;C |</a>
-          <a href="#" id="fahrenheit">&#176;F</a> -->
           </div>
         </div>
         <div class="row days-info">
