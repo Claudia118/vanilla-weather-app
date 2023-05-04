@@ -24,7 +24,7 @@ li::first-letter {
   height: 100%;
   margin: 40px auto;
   border: 2px solid #27b1be;
-  background-color: #e2e0e0;
+  background-color: #d1cfcf;
   border-radius: 5px;
 }
 
@@ -48,6 +48,11 @@ li::first-letter {
 .col-md-6 {
   display: inline-block;
   margin: 25px auto;
+}
+
+.col-md-6 .active {
+  color: #000;
+  cursor: default;
 }
 
 .city-name {

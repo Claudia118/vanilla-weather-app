@@ -39,6 +39,8 @@ function displayTemperature(response) {
   iconElement.setAttribute("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
 
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  celsiusTemp = response.data.temperature.current;
 }
 
 function search(city) {
@@ -55,5 +57,32 @@ function handlesCity(event) {
   search(cityElement.value);
 }
 
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+
+  //remove the active class in the celsius element
+  celsiusElement.classList.remove("active");
+  fahrenheitElement.classList.add("active");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displaycelsius(event) {
+  event.preventDefault();
+  celsiusElement.classList.add("active");
+  fahrenheitElement.classList.remove("active");
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handlesCity);
+
+let fahrenheitElement = document.querySelector("#fahrenheit");
+fahrenheitElement.addEventListener("click", displayFahrenheit);
+
+let celsiusElement = document.querySelector("#celsius");
+celsiusElement.addEventListener("click", displaycelsius);
