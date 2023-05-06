@@ -15,11 +15,37 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function forecast(coordinates) {
-  let apiKey = "2t7b32678ae0df330f1a61b393e477oc";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
+// function forecast(coordinates) {
+//   let apiKey = "2t7b32678ae0df330f1a61b393e477oc";
+//   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
 
-  console.log(apiUrl);
+//   console.log(apiUrl);
+// }
+
+function distplayForecast() {
+  let forecastElem = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row days-info" id="forecast">`;
+
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col weekdays">
+            <span class="day">${day}</span>
+            <br />
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" />
+            <br />
+            <span class="weather-temp-max">21°</span>
+            <span class="weather-temp-min">18°</span>
+          </div>
+      
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElem.innerHTML = forecastHTML;
 }
 
 function displayTemperature(response) {
@@ -49,7 +75,7 @@ function displayTemperature(response) {
 
   celsiusTemp = response.data.temperature.current;
 
-  forecast(response.data.coordinates);
+  // forecast(response.data.coordinates);
 }
 
 function search(city) {
@@ -95,3 +121,5 @@ fahrenheitElement.addEventListener("click", displayFahrenheit);
 
 let celsiusElement = document.querySelector("#celsius");
 celsiusElement.addEventListener("click", displaycelsius);
+
+distplayForecast();
