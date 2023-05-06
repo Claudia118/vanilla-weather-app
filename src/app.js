@@ -54,7 +54,7 @@ function displayForecast(response) {
 
 function forecast(coordinates) {
   let apiKey = "2t7b32678ae0df330f1a61b393e477oc";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayForecast);
 }
@@ -92,7 +92,7 @@ function displayTemperature(response) {
 function search(city) {
   let apiKey = "2t7b32678ae0df330f1a61b393e477oc";
 
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -103,32 +103,5 @@ function handlesCity(event) {
   search(cityElement.value);
 }
 
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-
-  //remove the active class in the celsius element
-  celsiusElement.classList.remove("active");
-  fahrenheitElement.classList.add("active");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function displaycelsius(event) {
-  event.preventDefault();
-  celsiusElement.classList.add("active");
-  fahrenheitElement.classList.remove("active");
-  let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handlesCity);
-
-let fahrenheitElement = document.querySelector("#fahrenheit");
-fahrenheitElement.addEventListener("click", displayFahrenheit);
-
-let celsiusElement = document.querySelector("#celsius");
-celsiusElement.addEventListener("click", displaycelsius);
