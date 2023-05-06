@@ -12,7 +12,7 @@ h1 {
   font-size: 3rem;
   font-weight: 700;
   color: #f7aa00;
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 li::first-letter {
@@ -47,7 +47,8 @@ li::first-letter {
 
 .col-md-6 {
   display: inline-block;
-  margin: 25px auto;
+  margin: 10px auto;
+  margin: 0;
 }
 
 .col-md-6 .active {
@@ -99,6 +100,10 @@ li::first-letter {
 
 .weekdays {
   font-size: 1.2rem;
+}
+
+.weather-temp-min {
+  opacity: 0.8;
 }
 
 .footer {
