@@ -20,3 +20,5 @@ This weather application is using [SheCodes Weather API] - (https://www.shecodes
 - CSS
 - SheCodes Weather API
 - Bootstrap.
+
+![Vanilla-Weather-Api](./src/image/vanilla-app.PNG)
