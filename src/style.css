@@ -114,7 +114,6 @@ li::first-letter {
 @media (max-width: 578px) {
   .weather-app {
     width: 330px;
-    margin: 80px 15px;
     padding: 10px 10px;
   }
 
