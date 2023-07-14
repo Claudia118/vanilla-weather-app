@@ -35,10 +35,10 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-          <div class="col weekdays">
+          <div class="col-2 col-md-2 weekdays mb-3 text-center">
             <span class="day">${formatDay(forecastDay.time)}</span>
             <br />
-            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="" />
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="" class="day-img"/>
             <br />
             <span class="weather-temp-max">${Math.round(forecastDay.temperature.maximum)}°</span>
             <span class="weather-temp-min">${Math.round(forecastDay.temperature.minimum)}°</span>

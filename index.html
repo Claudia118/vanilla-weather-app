@@ -40,11 +40,11 @@
 
           <input type="submit" value="Search" class="city-btn" id="cityBtn" />
         </form>
-        <div class="row align-items-start">
-          <div class="col-md-6">
+        <div class="row align-items-start city-section">
+          <div class="col-6 col-md-6">
             <ul class="city-description">
               <li class="city-name" id="city-name"></li>
-              <li>Last updated: <span id="date"></span></li>
+              <li> <span id="date"></span></li>
               <li id="description">Clear</li>
               <li>
                 Humidity: <span id="humidity"></span>% Wind:
@@ -52,12 +52,12 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-6">
+          <div class="col-3 col-md-6">
             <ul class="temp-description">
               <li class="icon">
                 <img
                   src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                  id="icon-img"
+                  id="icon-img" class="icon-img"
                 />
               </li>
               <li class="temp" id="temperature"></li>
